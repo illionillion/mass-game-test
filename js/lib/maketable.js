@@ -6,6 +6,7 @@ export class Table{
         this.playerRow=9;
         this.playerCol=0;
         this.table=null;
+        this.playerObj=null;
     }
 
     create(ele){
@@ -35,13 +36,20 @@ export class Table{
     }
 
     playerfetch(player){
-        this.playerRow=player.playerRow;
-        this.playerCol=player.playerCol;
+        // this.playerRow=player.playerRow;
+        // this.playerCol=player.playerCol;
+        this.playerObj=player;
     }
 
     move(){
         // console.log(this.table.querySelector("td[data-point='now']"));
+        this.table.querySelector("td[data-point='now']").innerHTML=this.playerObj.image[this.playerObj.status];
+        let ws=this.table.querySelector("td[data-point='now']").innerHTML;
         this.table.querySelector("td[data-point='now']").innerHTML="";
+        this.table.querySelector("td[data-point='now']").dataset.point="";
+        this.table.querySelector("td[data-row='"+this.playerRow+"'][data-col='"+this.playerCol+"']").innerHTML=ws;
+        this.table.querySelector("td[data-row='"+this.playerRow+"'][data-col='"+this.playerCol+"']").dataset.point="now";
         //rowとcolが一致するやつをたたく
+
     }
 }

@@ -6,9 +6,28 @@ import {Player} from "./lib/player.js";
     let tables=new Table();
     tables.create("#screen");
     let player=new Player(tables);
-    player.frontstep();
-    tables.playerfetch(player);
-    console.log(tables);
-    console.log(player);
-    tables.move();
+
+    document.querySelector("#run-btn").addEventListener("click",function(){
+        // (function(){
+      
+        eval(document.querySelector("#editor").value);
+
+        // }())
+    
+    })
+
+    // player.frontstep();
+    // console.log(tables);
+    // console.log(player);
+    // tables.move();
+    // player.turn("right");
+    // player.frontstep();
+    // player.frontstep();
+    // tables.move();
+    // console.log(tables);
+    // console.log(player);
+
+    
+    
+
 }())
