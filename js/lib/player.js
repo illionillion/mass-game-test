@@ -5,7 +5,7 @@ export class Player{
         this.playerRow=table.playerRow;
         this.playerCol=table.playerCol;
         this.status="up";
-        this.image={"up":"↑","down":"↓","left":"←","right":"→"};
+        this.image={"up":"&uarr;","down":"&darr;","left":"&larr;","right":"&rarr;"};
     }
     turn(stat){
         this.status=stat;
