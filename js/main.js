@@ -15,6 +15,7 @@ import {P} from "./lib/action.js";
         eval(document.querySelector("#editor").value);
 
         // }())
+        $.actionId=0;
     
     })
 

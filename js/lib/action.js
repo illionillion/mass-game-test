@@ -2,7 +2,8 @@ export class P{
     constructor(Pobj,Tobj){
         this.Pactions=Pobj;
         this.Tactions=Tobj;
-        this.actionArr=[];
+        // this.actionArr=[];
+        this.actionId=0;
     }
     wait = async (ms) => {
         return new Promise((resolve) => {
@@ -24,7 +25,7 @@ export class P{
 
     // async 
     Frontstep(){
-        // setTimeout(() => {
+        setTimeout(() => {
             // await this.testAsync();
             // await this.wait(1000);
             // this.actionArr.push();
@@ -34,12 +35,13 @@ export class P{
             this.Pactions.frontstep();
             this.Tactions.move();
 
-        // }, 1000);
+        }, 1000*this.actionId);
+        this.actionId++;
     }
 
     // async 
     Turn(allow){
-        // setTimeout(() => {
+        setTimeout(() => {
             // await this.testAsync();
             // await this.wait(1000);
 
@@ -49,6 +51,8 @@ export class P{
             this.Pactions.turn(allow);
             this.Tactions.move();
 
-            // }, 1000);
+            }, 1000*this.actionId);
+        this.actionId++;
+
     }
 }
