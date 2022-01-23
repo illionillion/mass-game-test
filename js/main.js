@@ -13,6 +13,7 @@ import {P} from "./lib/action.js";
         // (function(){
       
         eval(document.querySelector("#editor").value);
+        // $.call(document.querySelector("#editor").value);
 
         // }())
         $.actionId=0;

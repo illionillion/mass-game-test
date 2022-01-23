@@ -55,4 +55,8 @@ export class P{
         this.actionId++;
 
     }
+
+    call(val){
+        eval(val);
+    }
 }
