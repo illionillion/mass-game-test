@@ -1,0 +1,24 @@
+{
+  "name": "mass-game-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "http-server -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illionillion/mass-game-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illionillion/mass-game-test/issues"
+  },
+  "homepage": "https://github.com/illionillion/mass-game-test#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
